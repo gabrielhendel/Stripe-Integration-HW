@@ -17,3 +17,11 @@ npm start
 ```
 
 3. Go to [http://localhost:4242/checkout.html](http://localhost:4242/checkout.html)
+
+
+4. Enter test credit card info detailed here: https://stripe.com/docs/testing
+	For example: 4242424242424242	CVC: any 3 digits   Expiration Date: any future date
+
+
+5. Check that payment returns correct user-facing message (e.g. "payment was successful")
+
