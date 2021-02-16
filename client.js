@@ -74,6 +74,13 @@ var payWithCard = function(stripe, card, clientSecret) {
       } else {
         // The payment succeeded!
         orderComplete(result.paymentIntent.id);
+        fetch("/log-successful-payment", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(result)
+        })
       }
     });
 };
@@ -91,6 +98,7 @@ var orderComplete = function(paymentIntentId) {
     );
   document.querySelector(".result-message").classList.remove("hidden");
   document.querySelector("button").disabled = true;
+
 };
 
 // Show the customer the error from Stripe if their card fails to charge

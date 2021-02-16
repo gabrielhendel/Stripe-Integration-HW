@@ -25,3 +25,6 @@ npm start
 
 5. Check that payment returns correct user-facing message (e.g. "payment was successful")
 
+
+6. Check combined.log file for logging of all successful payments. It won't look pretty, but should list the payment amount and currency.
+
